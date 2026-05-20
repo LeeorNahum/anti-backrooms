@@ -6,8 +6,4 @@ It is for UI, decks, diagrams, docs, PDFs, signage, booths, and other user-facin
 
 It gives the agent a way to name and correct outputs that technically fit but still feel averaged, impossible, or detached from real human use.
 
-`SKILL.md` contains the review method and operating behavior.
-
-`references/reference.md` contains the deeper model and correction patterns.
-
-`references/examples.md` contains analog examples across surfaces.
+`SKILL.md` contains the review method, operating behavior, deeper model, correction patterns, and compact examples.

@@ -3,7 +3,7 @@ name: anti-backrooms-design
 description: Review and improve visual, spatial, and user-facing artifacts for coherent-but-wrong design failures that violate human normalcy including wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, or other layouts where local plausibility can hide global incoherence.
 metadata:
   author: Leeor Nahum
-  version: "1.1.1"
+  version: "1.2.0"
 ---
 
 # Anti-Backrooms Design
@@ -18,14 +18,16 @@ The core test is simple: do not only ask whether each part is valid. Ask whether
 
 The guiding principle is that the artifact should not `violate` the laws of human normalcy. A violation can be subtle: everything may be locally plausible, but the whole thing feels robotic, backrooms-like, or wrong for the actual viewer path.
 
+The Backrooms metaphor works because the space is familiar but not placeable. Objects repeat without purpose, rooms are segmented but not meaningfully organized, scale feels off even when nothing is obviously broken, navigation exists but does not produce confidence, and the world seems assembled from averages of real places rather than from one real place.
+
+That is exactly how many AI artifacts fail: correct local syntax with wrong global intent, valid components with invalid composition, reasonable words with unreasonable placement, polished visuals with no believable human path, and internal context accidentally sucked into the public artifact.
+
 ## Quick Start
 
 1. Identify the artifact, audience, and real viewing context.
 2. Decide the primary viewer path: what should be noticed first, next, and last.
 3. Run the core checks and failure modes below.
 4. Fix structure before polishing style.
-5. If the artifact still feels uncanny or hard to explain, read `references/reference.md`.
-6. If you want analog examples for the current surface, read `references/examples.md`.
 
 ## Core Checks
 
@@ -48,6 +50,30 @@ Inspect every artifact through these lenses:
 - **Context suction:** nearby but irrelevant context contaminates wording, structure, or aesthetics.
 - **Repetition without meaning:** repeated cards, sections, slides, phrases, or visual moves add noise instead of clarity.
 - **Human-path failure:** a person moving through the artifact would not know where to look, what to do, or when the story ends.
+- **Proper-noun leakage:** real names, project names, repo names, source labels, or personal context appear where a generic artifact should use placeholders or audience-facing language.
+- **Negative-anchor leakage:** the artifact warns against bad examples by naming them, accidentally making the bad pattern more likely to be copied.
+- **Reference infection:** appendix, source notes, examples, or implementation details leak into the main artifact instead of staying in their proper supporting place.
+
+## Backrooms Mapping
+
+Use these mappings while composing, not only after:
+
+- **Randomly segmented rooms:** sections, cards, folders, slides, or dividers exist because artifacts often have them, not because they create a decision, proof, or transition. Merge or delete segments that do not earn their place.
+- **Mono-yellow sameness:** repeated cards, wording rhythms, UI blocks, or visual moves are consistent but dead. Keep consistency, but add deliberate hierarchy and variation where it clarifies meaning.
+- **Endless hum-buzz:** helper text, badges, labels, footnotes, and low-value explanations create ambient noise. Make the artifact quieter so the signal dominates.
+- **Non-Euclidean geometry:** the order is locally navigable but globally wrong. The artifact seems to conclude, then restarts; main story and appendix bleed together; diagrams read in loops. Reset the path.
+- **Wrong scale:** text, whitespace, diagrams, controls, or physical placements are sized for the canvas, not the real viewer, room, print, device, or hand.
+- **Duplication / replacement:** sections repeat the same beat with slightly different wording, or cloned modules drift without reason. Collapse duplicates or give each repeated structure a distinct job.
+- **Observer effect:** the artifact survives a static skim but breaks when you imagine actually using it. Simulate the real interaction sequence, not just the screenshot.
+
+## Biggest AI Mistakes
+
+Catch these before they harden:
+
+- **Surface-first design:** polished visuals, gradients, cards, or diagrams cover weak hierarchy or weak content strategy.
+- **Placeholder logic shipped as real logic:** scaffolding, generic headings, process notes, or builder language survive into the final artifact.
+- **Good-enough-for-now maze-making:** a shaky structure gets decorated instead of reset. If the maze is wrong, do not decorate it. Rebuild the maze.
+- **Context contamination:** the artifact inherits terminology, proper nouns, structure, or aesthetics from nearby context that does not belong to the audience-facing result.
 
 ## Default Behaviors
 
@@ -57,23 +83,39 @@ When this skill is active:
 - prefer deleting weak or suspicious elements over defending them
 - if a choice feels arbitrary, ask what user, task, or space constraint justifies it
 - if a label smells internal, remove it or ask before shipping it
+- if a generic artifact contains a real person's name, repo name, local path, chat artifact, or source-specific proper noun, remove it unless that identity is truly part of the audience-facing artifact
+- do not mention bad or deprecated examples inside the final artifact unless the artifact is explicitly a critique or training guide where the example is needed
 - verify readability in the real medium instead of assuming it from the canvas
 - keep mainline narrative separate from appendix or reference material
 - if something only works because the viewer already knows the backstory, it is not solved
 
-## Reference Loading
+## Correction Patterns
 
-Read `references/reference.md` when:
+When the artifact feels like an impossible corridor, reset the path:
 
-- the artifact feels uncanny but the failure is hard to name
-- you need the deeper Backrooms-to-design mapping
-- you need correction patterns for scale, path, audience, or purpose
+- define the true start
+- define the true end
+- map the minimum beats in between
+- cut anything not on the main path or clearly marked as appendix/reference
 
-Read `references/examples.md` when:
+When scale or placement feels abstract, re-ground in physics:
 
-- you want examples for the exact surface you are reviewing
-- you need analogs for UI, slides, diagrams, docs, PDFs, booths, signage, or physical layouts
-- you want a quick anti-example to sharpen a critique before responding
+- specify viewer distance
+- specify device size, print size, room scale, or physical approach path
+- specify whether the artifact is scanned, projected, held, skimmed, clicked, or navigated
+- resize and reprioritize based on those constraints
+
+When content feels contaminated or generic, re-ground in audience:
+
+- identify the real audience
+- remove anything they would never need to see
+- replace process labels with audience-relevant language
+
+When repetition or decorative noise takes over, re-ground in purpose:
+
+- state the artifact's job in one sentence
+- justify every section against that job
+- delete anything whose role cannot be defended quickly
 
 ## Review Workflow
 
@@ -95,7 +137,33 @@ Think a few moves ahead. Avoid constructing a maze that technically connects but
 - separate main narrative from reference material
 - replace generic repetition with explicit information hierarchy
 - remove meta text, planning residue, and environmental contamination
+- replace leaked real-world names and local context with placeholders, audience-facing labels, or nothing
+- describe categories of bad patterns instead of naming bad examples that could become anchors
 - ask the user when a suspicious choice could be intentional but cannot be justified confidently
+
+## Compact Anti-Examples
+
+These are pattern categories, not labels to copy into final artifacts:
+
+- Public artifact shows process labels instead of audience-facing meaning -> replace with a real title, product label, or nothing.
+- Presentation works only from laptop distance -> simplify until it survives the actual room, projector, or print size.
+- Deck or page reaches its natural ending, then keeps going as mainline content -> close cleanly and move extra material to appendix/reference.
+- Multiple sections say minor variants of the same idea -> keep the strongest statement and one proof.
+- QR code, product photo, CTA, prototype, and logo all compete equally -> choose one focal anchor and demote the rest.
+- Chart is visually elegant but does not support the claim -> fix narrative honesty before style.
+- Document has generic section inventory instead of information architecture -> organize around decisions, tasks, proofs, and audience needs.
+- Flow diagram has correct nodes but no reading order -> add explicit start, direction, hierarchy, and traversal path.
+- Physical table, booth, or sign is composed like a flat screen -> design from real sightlines, approach, reach, and crowd behavior.
+
+## Fast Review Prompt
+
+When in doubt, ask:
+
+- Is this artifact intentional, or does it feel averaged?
+- Does anything belong to the process more than the audience?
+- Does the artifact already know where it should end?
+- Is any important element only working because I am zoomed in or because I know hidden context?
+- If a stranger walked into this with no backstory, would it still feel coherent?
 
 ## Response Format
 
