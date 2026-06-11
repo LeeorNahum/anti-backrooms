@@ -1,12 +1,12 @@
 ---
-name: "anti-backrooms-design"
-description: "Review and improve visual, spatial, and user-facing artifacts for coherent-but-wrong design failures that violate human normalcy including wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, or other layouts where local plausibility can hide global incoherence."
+name: "anti-backrooms"
+description: "Review and improve visual, spatial, textual, and user-facing artifacts for coherent-but-wrong failures that violate human normalcy, including nonsensical wording, unsupported claims, wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, copy, or other artifacts where local plausibility can hide global incoherence."
 metadata:
   author: "Leeor Nahum"
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
-# Anti-Backrooms Design
+# Anti-Backrooms
 
 Use this skill to catch a class of failure that is hard to express with ordinary rules: the output is not exactly false, but it feels wrong.
 
@@ -14,7 +14,7 @@ The Backrooms are the right metaphor. Everything looks almost normal, but the wh
 
 Use this skill to avoid building artifacts that feel like a no-clipped average of nearby patterns instead of something intentionally designed for a real human, a real task, and a real space.
 
-The core test is simple: do not only ask whether each part is valid. Ask whether the whole artifact makes sense for a real human to inhabit, read, scan, click, project, print, or physically approach.
+The core test is simple: do not only ask whether each part is valid. Ask whether the whole artifact and its language make sense for a real human to understand, inhabit, read, scan, click, project, print, or physically approach.
 
 The guiding principle is that the artifact should not `violate` the laws of human normalcy. A violation can be subtle: everything may be locally plausible, but the whole thing feels robotic, backrooms-like, or wrong for the actual viewer path.
 
@@ -24,7 +24,7 @@ That is exactly how many AI artifacts fail: correct local syntax with wrong glob
 
 ## Quick Start
 
-1. Identify the artifact, audience, and real viewing context.
+1. Identify the artifact, audience, intended meaning, and real viewing context.
 2. Decide the primary viewer path: what should be noticed first, next, and last.
 3. Run the core checks and failure modes below.
 4. Fix structure before polishing style.
@@ -34,6 +34,9 @@ That is exactly how many AI artifacts fail: correct local syntax with wrong glob
 Inspect every artifact through these lenses:
 
 - **Scale:** Is it readable, tappable, scannable, or visible at actual use distance?
+- **Meaning:** Do the words form a clear, internally consistent message that a real reader can understand?
+- **Wording:** Are labels, sentences, and transitions natural and specific rather than merely grammatical?
+- **Support:** Do claims follow from the evidence and context actually present in the artifact?
 - **Placement:** Why is each element here instead of somewhere else?
 - **Hierarchy:** What should the viewer notice first, second, and third?
 - **Flow:** Does the structure resolve, or does it wander and restart?
@@ -44,6 +47,9 @@ Inspect every artifact through these lenses:
 ## Failure Modes To Hunt
 
 - **Local realism, global nonsense:** individual pieces look fine, but the whole artifact has no convincing path or reason.
+- **Semantic plausibility, actual nonsense:** each sentence sounds polished in isolation, but the combined message is contradictory, vague, unsupported, or impossible to paraphrase plainly.
+- **Text-shaped filler:** headings, labels, captions, or body copy occupy expected slots without communicating information the audience needs.
+- **Claim drift:** conclusions become stronger or more specific than the evidence, chart, source, or surrounding text supports.
 - **Wrong scale:** the artifact ignores projection distance, print size, screen size, touch targets, or sightlines.
 - **Impossible adjacency:** elements sit together because the model can place them there, not because a user expects them there.
 - **Meta leakage:** placeholders, repo terms, process labels, or internal planning language leak into the final artifact.
@@ -86,6 +92,9 @@ Catch these before they harden:
 When this skill is active:
 
 - Think ahead while composing; do not postpone obvious contradictions
+- Read text for meaning, not just grammar; make sure adjacent statements agree and the full message can be paraphrased plainly
+- Replace fluent but empty wording with specific audience-facing information
+- Keep claims proportionate to the evidence shown
 - Prefer deleting weak or suspicious elements over defending them
 - If a choice feels arbitrary, ask what user, task, or space constraint justifies it
 - If a label smells internal, remove it or ask before shipping it
@@ -117,6 +126,8 @@ When content feels contaminated or generic, re-ground in audience:
 - Identify the real audience
 - Remove anything they would never need to see
 - Replace process labels with audience-relevant language
+- Rewrite any sentence that cannot be paraphrased clearly or tied to a concrete purpose
+- Check that headings, labels, examples, and conclusions agree with the body and with each other
 
 When repetition or decorative noise takes over, re-ground in purpose:
 
@@ -143,6 +154,8 @@ Think a few moves ahead. Avoid constructing a maze that technically connects but
 - Size for the real viewing context, not the canvas
 - Separate main narrative from reference material
 - Replace generic repetition with explicit information hierarchy
+- Prefer clear, specific language over fluent filler or ambiguous abstraction
+- Verify that the text says what the artifact appears to claim and that the available evidence supports it
 - Remove meta text, planning residue, and environmental contamination
 - Replace leaked real-world names and local context with placeholders, audience-facing labels, or nothing
 - Describe categories of bad patterns instead of naming bad examples that could become anchors
@@ -159,6 +172,8 @@ These are pattern categories, not labels to copy into final artifacts:
 - Multiple sections say minor variants of the same idea -> keep the strongest statement and one proof.
 - QR code, product photo, CTA, prototype, and logo all compete equally -> choose one focal anchor and demote the rest.
 - Chart is visually elegant but does not support the claim -> fix narrative honesty before style.
+- Paragraphs are individually fluent but do not add up to one defensible message -> state the intended point plainly, then keep only text that supports it.
+- Heading promises one topic while the body discusses another -> align the label and content around the audience's actual question.
 - Document has generic section inventory instead of information architecture -> organize around decisions, tasks, proofs, and audience needs.
 - Flow diagram has correct nodes but no reading order -> add explicit start, direction, hierarchy, and traversal path.
 - Physical table, booth, or sign is composed like a flat screen -> design from real sightlines, approach, reach, and crowd behavior.
@@ -173,6 +188,8 @@ When in doubt, ask:
 - Is any important element only working because I am zoomed in or because I know hidden context?
 - If a stranger walked into this with no backstory, would it still feel coherent?
 - Does every name read correctly from the viewer's frame, not just the author's?
+- Can the main message be paraphrased plainly without inventing missing logic?
+- Do the claims, examples, labels, and evidence agree with one another?
 
 ## Response Format
 
